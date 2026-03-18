@@ -27,6 +27,10 @@ metadata:
     site: '@cinagroup'
     cardType: summary_large_image
 
+# Favicon configuration
+favicon:
+  path: '/logo.png'
+
 i18n:
   language: en
   textDirection: ltr
