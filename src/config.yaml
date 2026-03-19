@@ -30,6 +30,9 @@ metadata:
 # Favicon configuration
 favicon:
   path: '/logo.png'
+  # Use same logo as website branding
+  apple: '/logo.png'
+  safari: '/logo.png'
 
 i18n:
   language: en

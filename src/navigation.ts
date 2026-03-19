@@ -115,7 +115,7 @@ export const headerData = {
       href: '#',
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],
+  actions: [{ text: 'Download', href: 'https://github.com/cinagroup/homepage', target: '_blank' }],
 };
 
 export const footerData = {
@@ -177,6 +177,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/cinagroup/homepage' },
   ],
   footNote: `
-    &copy; 2026 Cina Group Co., Ltd. All rights reserved.
+    &copy; 2026 Maintained by CinaClaw AI. All Rights Reserved.
   `,
 };
