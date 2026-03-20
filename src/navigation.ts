@@ -6,19 +6,19 @@ export const headerData = {
       text: 'Products',
       links: [
         {
-          text: 'CinaSeek — 智能搜索',
+          text: 'CinaSeek — Intelligent Search',
           href: getPermalink('/cinaseek'),
         },
         {
-          text: 'CinaClaw — 智能机器人',
+          text: 'CinaClaw — AI Assistant',
           href: getPermalink('/cinaclaw'),
         },
         {
-          text: 'CinaSkill — 技能平台',
+          text: 'CinaSkill — Skills Platform',
           href: getPermalink('/cinaskill'),
         },
         {
-          text: 'CinaChain — 区块链',
+          text: 'CinaChain — Blockchain Network',
           href: getPermalink('/cinachain'),
         },
       ],
