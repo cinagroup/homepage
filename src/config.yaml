@@ -42,10 +42,10 @@ metadata:
 
 # Favicon configuration
 favicon:
-  path: '/logo.png'
-  # Use same logo as website branding
-  apple: '/logo.png'
-  safari: '/logo.png'
+  path: '/favicon.svg'
+  # Use favicon SVG for consistency across browser tab and branding
+  apple: '/favicon.svg'
+  safari: '/favicon.svg'
 
 i18n:
   language: en

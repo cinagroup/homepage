@@ -135,7 +135,6 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
-    &copy; 2026 CinaGroup. All Rights Reserved. <br/>
-    <span class="text-sm text-gray-500">Building the Future of AI & Web3</span>
+    &copy; 2026 By CinaClaw AI. All Rights Reserved.
   `,
 };
