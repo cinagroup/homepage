@@ -9,9 +9,20 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: CinaGroup
+    default: CinaGroup — AI & Web3 Solutions
     template: '%s — CinaGroup'
-  description: "CinaGroup - Professional Business Solutions"
+  description: "CinaGroup provides cutting-edge solutions in AI search (CinaSeek), intelligent robots (CinaClaw), skill platforms (CinaSkill), and blockchain infrastructure (CinaChain)."
+  keywords:
+    - "AI search"
+    - "intelligent robot"
+    - "blockchain"
+    - "Web3"
+    - "CinaSeek"
+    - "CinaClaw"
+    - "CinaSkill"
+    - "CinaChain"
+    - "automation"
+    - "smart contracts"
   robots:
     index: true
     follow: true
@@ -21,7 +32,9 @@ metadata:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
+        alt: "CinaGroup - AI & Web3 Solutions"
     type: website
+    locale: en_US
   twitter:
     handle: '@cinagroup'
     site: '@cinagroup'
@@ -74,6 +87,9 @@ analytics:
   vendors:
     googleAnalytics:
       id: null # or "G-XXXXXXXXXX"
+    splitbee:
+      enabled: false # Set to true and add token for Splitbee analytics
+      token: null
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

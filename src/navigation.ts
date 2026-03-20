@@ -3,43 +3,65 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: 'Products',
       links: [
         {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
+          text: 'CinaSeek — 智能搜索',
+          href: getPermalink('/cinaseek'),
         },
         {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
+          text: 'CinaClaw — 智能机器人',
+          href: getPermalink('/cinaclaw'),
         },
         {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
+          text: 'CinaSkill — 技能平台',
+          href: getPermalink('/cinaskill'),
         },
         {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
+          text: 'CinaChain — 区块链',
+          href: getPermalink('/cinachain'),
         },
       ],
     },
     {
-      text: 'Pages',
+      text: 'Solutions',
       links: [
         {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
+          text: 'Enterprise',
+          href: getPermalink('/#business'),
         },
         {
-          text: 'Services',
-          href: getPermalink('/services'),
+          text: 'Developers',
+          href: getPermalink('/cinaskill'),
         },
         {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
+          text: 'Startups',
+          href: getPermalink('/contact'),
+        },
+      ],
+    },
+    {
+      text: 'Resources',
+      links: [
+        {
+          text: 'Blog',
+          href: getBlogPermalink(),
         },
         {
-          text: 'About us',
+          text: 'Documentation',
+          href: '#',
+        },
+        {
+          text: 'API Reference',
+          href: '#',
+        },
+      ],
+    },
+    {
+      text: 'Company',
+      links: [
+        {
+          text: 'About',
           href: getPermalink('/about'),
         },
         {
@@ -47,136 +69,73 @@ export const headerData = {
           href: getPermalink('/contact'),
         },
         {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
+          text: 'Careers',
+          href: '#',
         },
       ],
-    },
-    {
-      text: 'Landing',
-      links: [
-        {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
-        },
-        {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
-        },
-      ],
-    },
-    {
-      text: 'Blog',
-      links: [
-        {
-          text: 'Blog List',
-          href: getBlogPermalink(),
-        },
-        {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
-        },
-        {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
-        },
-      ],
-    },
-    {
-      text: 'Widgets',
-      href: '#',
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/cinagroup/homepage', target: '_blank' }],
+  actions: [
+    { text: 'Get Started', href: '/contact', variant: 'primary' },
+    { text: 'GitHub', href: 'https://github.com/cinagroup/homepage', target: '_blank' },
+  ],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'Products',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: 'CinaSeek — 智能搜索', href: '/cinaseek' },
+        { text: 'CinaClaw — 智能机器人', href: '/cinaclaw' },
+        { text: 'CinaSkill — 技能平台', href: '/cinaskill' },
+        { text: 'CinaChain — 区块链', href: '/cinachain' },
       ],
     },
     {
-      title: 'Platform',
+      title: 'Developers',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
+        { text: 'Documentation', href: '#' },
+        { text: 'API Reference', href: '#' },
+        { text: 'SDK & Tools', href: '#' },
+        { text: 'Grants Program', href: '#' },
+        { text: 'Developer Blog', href: '/blog' },
       ],
     },
     {
       title: 'Support',
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: 'Help Center', href: '#' },
+        { text: 'Community', href: '#' },
+        { text: 'Contact Support', href: '/contact' },
+        { text: 'System Status', href: '#' },
       ],
     },
     {
       title: 'Company',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
+        { text: 'About Us', href: '/about' },
+        { text: 'Blog', href: '/blog' },
         { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'Press Kit', href: '#' },
+        { text: 'Contact', href: '/contact' },
       ],
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
+    { text: 'Terms of Service', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Cookie Policy', href: '#' },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/cinagroup' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+    { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/cinagroup' },
+    { ariaLabel: 'Twitter', icon: 'tabler:brand-x', href: 'https://twitter.com/cinagroup' },
+    { ariaLabel: 'Discord', icon: 'tabler:brand-discord', href: '#' },
+    { ariaLabel: 'Telegram', icon: 'tabler:brand-telegram', href: '#' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/cinagroup/homepage' },
   ],
   footNote: `
-    &copy; 2026 Maintained by CinaClaw AI. All Rights Reserved.
+    &copy; 2026 CinaGroup. All Rights Reserved. <br/>
+    <span class="text-sm text-gray-500">Building the Future of AI & Web3</span>
   `,
 };
