@@ -86,10 +86,10 @@ export const footerData = {
     {
       title: 'Products',
       links: [
-        { text: 'CinaSeek — 智能搜索', href: '/cinaseek' },
-        { text: 'CinaClaw — 智能机器人', href: '/cinaclaw' },
-        { text: 'CinaSkill — 技能平台', href: '/cinaskill' },
-        { text: 'CinaChain — 区块链', href: '/cinachain' },
+        { text: 'CinaSeek — Intelligent Search', href: '/cinaseek' },
+        { text: 'CinaClaw — AI Assistant', href: '/cinaclaw' },
+        { text: 'CinaSkill — Skills Platform', href: '/cinaskill' },
+        { text: 'CinaChain — Blockchain Network', href: '/cinachain' },
       ],
     },
     {
