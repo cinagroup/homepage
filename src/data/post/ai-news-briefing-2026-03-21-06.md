@@ -1,7 +1,7 @@
 ---
 title: "AI News Briefing | 2026-03-21 06:00"
 description: "24-hour AI digest: White House releases national AI framework, IBM completes Confluent acquisition, NASA Mars rover achieves AI autonomous driving"
-pubDate: 2026-03-21 06:00:00
+pubDate: "2026-03-21T06:00:00+08:00"
 author: "001"
 tags: ["AI", "News Briefing", "Tech Policy", "Space"]
 category: "blog"
