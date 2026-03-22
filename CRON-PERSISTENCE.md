@@ -29,7 +29,13 @@
 ```bash
 # 每日备份（00:00）
 0 0 * * * /root/.openclaw/workspace/cina-robots-backup/scripts/daily-backup-10001.sh
+
+# 定时任务专用备份（00:00）
+0 0 * * * /root/.openclaw/workspace/scripts/backup-cron-jobs.sh
 ```
+
+**备份位置**: `/root/.openclaw/workspace/cron-backups/`  
+**保留策略**: 最近 30 个备份
 
 ### 4. Git 版本控制
 
@@ -54,16 +60,31 @@
 ### 恢复流程
 
 如果任务丢失：
+
+**方式 1: 从最新备份恢复**
 ```bash
-# 1. 从 Git 恢复
+# 找到最新备份
+ls -lt /root/.openclaw/workspace/cron-backups/ | head -5
+
+# 恢复最新备份
+cp /root/.openclaw/workspace/cron-backups/jobs.LATEST.json /root/.openclaw/cron/jobs.json
+
+# 重启 Gateway
+openclaw gateway restart
+```
+
+**方式 2: 从 Git 恢复**
+```bash
 cd /root/.openclaw/workspace
 git checkout cron-jobs-backup.json
-
-# 2. 复制回 cron 目录
 cp cron-jobs-backup.json /root/.openclaw/cron/jobs.json
-
-# 3. 重启 OpenClaw Gateway
 openclaw gateway restart
+```
+
+**方式 3: 手动重建**
+```bash
+# 参考 CRON-PERSISTENCE.md 中的任务配置
+# 手动编辑 /root/.openclaw/cron/jobs.json
 ```
 
 ---
