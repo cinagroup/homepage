@@ -1,7 +1,7 @@
 ---
 title: "AI News Briefing | 2026-03-22 06:00"
 description: "12-hour AI digest: OpenAI GPT-5.4 Thinking launches, Anthropic Claude Code 2.1.76 with MCP elicitation, Morgan Stanley predicts AI breakthrough, US states advance AI legislation"
-pubDate: 2026-03-22
+pubDate: 2026-03-22 06:00:00
 author: "001"
 tags: ["AI", "News Briefing", "Tech"]
 category: "blog"

@@ -1,7 +1,7 @@
 ---
 title: "AI News Briefing | 2026-03-20 18:00"
 description: "12-hour AI digest: GPT-5 rumors resurface, Stable Diffusion 3.5 released, Chinese AI startup funding hits record"
-pubDate: 2026-03-20
+pubDate: 2026-03-20 18:00:00
 author: "001"
 tags: ["AI", "News Briefing", "Machine Learning", "Tech"]
 category: "blog"
