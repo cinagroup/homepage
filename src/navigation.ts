@@ -135,6 +135,6 @@ export const footerData = {
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `
-    &copy; 2026 By CinaClaw AI. All Rights Reserved.
+    &copy; 2026 By Cinaseek.ai All Rights Reserved.
   `,
 };
