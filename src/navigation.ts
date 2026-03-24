@@ -129,8 +129,8 @@ export const footerData = {
   ],
   socialLinks: [
     { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/cinagroup' },
-    { ariaLabel: 'Twitter', icon: 'tabler:brand-x', href: 'https://twitter.com/cinagroup' },
-    { ariaLabel: 'Discord', icon: 'tabler:brand-discord', href: '#' },
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/cinagroup' },
+    { ariaLabel: 'TikTok', icon: 'tabler:brand-tiktok', href: 'https://tiktok.com/@cinaseek' },
     { ariaLabel: 'Telegram', icon: 'tabler:brand-telegram', href: '#' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
