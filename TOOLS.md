@@ -38,3 +38,14 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
+
+## CinaGroup News Briefing Schedule
+
+- **Standard schedule**: 06:00 and 18:00 (Asia/Shanghai)
+- **Publish offset**: -30 minutes (publish at 05:30 and 17:30)
+- **Repository**: cinagroup/homepage → `src/data/post/ai-news-briefing-YYYY-MM-DD-HH.md`
+- **Format**: Follow existing briefing template with 7 top stories + trend watch
+
+**Example:**
+- 06:00 briefing → publish at 05:30
+- 18:00 briefing → publish at 17:30
