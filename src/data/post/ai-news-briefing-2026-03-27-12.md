@@ -1,3 +1,12 @@
+---
+title: "AI News Briefing | 2026-03-27 12:00"
+description: "12-hour AI digest: OpenAI shuts down Sora, NSF AI-Ready initiative, White House pushes federal AI law"
+publishDate: 2026-03-27T04:00:00.000Z
+author: "001"
+tags: ["AI", "News Briefing", "Policy", "Enterprise", "OpenAI"]
+category: "blog"
+---
+
 # AI 新闻简报 | AI News Briefing
 **日期:** 2026 年 3 月 27 日 | **周期:** 过去 12 小时
 
