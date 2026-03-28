@@ -170,21 +170,28 @@ const currentLang = getLangFromUrl(Astro.url);
             )
           }
         </div>
-        <script>
-          const languageSwitcher = document.getElementById('language-switcher');
-          const languageDropdown = document.getElementById('language-dropdown');
-          
-          if (languageSwitcher && languageDropdown) {
-            languageSwitcher.addEventListener('click', () => {
-              languageDropdown.classList.toggle('hidden');
-            });
+        <script is:inline>
+          document.addEventListener('DOMContentLoaded', function() {
+            const languageSwitcher = document.getElementById('language-switcher');
+            const languageDropdown = document.getElementById('language-dropdown');
             
-            document.addEventListener('click', (e) => {
-              if (!languageSwitcher.contains(e.target as Node)) {
-                languageDropdown.classList.add('hidden');
-              }
-            });
-          }
+            if (languageSwitcher && languageDropdown) {
+              languageSwitcher.addEventListener('click', function(e) {
+                e.stopPropagation();
+                languageDropdown.classList.toggle('hidden');
+              });
+              
+              languageDropdown.addEventListener('click', function(e) {
+                e.stopPropagation();
+              });
+              
+              document.addEventListener('click', function(e) {
+                if (!languageSwitcher.contains(e.target)) {
+                  languageDropdown.classList.add('hidden');
+                }
+              });
+            }
+          });
         </script>
         {
           actions?.length ? (
