@@ -1,0 +1,67 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+
+const metadata = {
+  title: 'CinaGroup — AI と Web3 ソリューション',
+  description: 'CinaGroup は、AI 検索 (CinaSeek)、インテリジェントロボット (CinaClaw)、スキルプラットフォーム (CinaSkill)、ブロックチェーンインフラ (CinaChain) の最先端ソリューションを提供します。',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="CinaGroup へようこそ"
+    title={'<span class="text-accent dark:text-white">AI と Web3</span> の未来を構築'}
+    subtitle="AI 検索、インテリジェントロボット、スキルプラットフォーム、ブロックチェーンインフラの最先端ソリューションを提供。世界中の企業と開発者を支援します。"
+    actions={[
+      {
+        variant: 'primary',
+        text: '製品を探す',
+        href: '#business',
+        icon: 'tabler:arrow-down',
+      },
+      { 
+        text: 'お問い合わせ', 
+        href: '/ja/contact',
+        icon: 'tabler:mail',
+      },
+    ]}
+    image={{ 
+      src: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80', 
+      alt: 'AI テクノロジー' 
+    }}
+  />
+
+  <section id="business" class="py-16 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4">
+          事業部門
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">
+          4 つの強力なプラットフォームが連携し、包括的な AI と Web3 ソリューションを提供
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {['CinaSeek', 'CinaClaw', 'CinaSkill', 'CinaChain'].map((name, i) => (
+          <div class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700">
+            <div class={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-${['green', 'orange', 'pink', 'purple'][i]}-400 to-${['green', 'orange', 'pink', 'purple'][i]}-600`}></div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold dark:text-white mb-2">{name}</h3>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                {['インテリジェント検索', 'AI アシスタント', 'スキルプラットフォーム', 'ブロックチェーンネットワーク'][i]}
+              </p>
+              <a href={`/ja/${name.toLowerCase()}`} class={`inline-flex items-center text-${['green', 'orange', 'pink', 'purple'][i]}-600 dark:text-${['green', 'orange', 'pink', 'purple'][i]}-400 font-medium text-sm`}>
+                詳しく見る
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
