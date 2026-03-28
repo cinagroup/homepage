@@ -1,0 +1,153 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: '专业服务',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget -->
+  <Hero
+    tagline="专业服务"
+    title="用我们的专业模板提升您的项目"
+    subtitle="探索我们精心设计的模板，适用于各种行业和用途。从引人注目的演示文稿到功能强大的网站设计，我们提供您成功所需的工具。"
+    actions={[{ variant: 'primary', target: '_blank', text: '开始探索', href: '/zh/' }]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: '服务展示',
+    }}
+  />
+
+  <!-- Features2 Widget -->
+  <Features2
+    title="探索我们多样化的模板"
+    subtitle="浏览以下精选内容，提升您的项目质量。"
+    columns={3}
+    items={[
+      {
+        title: '教育培训',
+        description:
+          '通过协调教学设计和视觉吸引力，模板简化了各种教学材料的内容创建，加快开发速度，营造引人入胜的教育空间。',
+        icon: 'tabler:school',
+      },
+      {
+        title: '室内设计',
+        description:
+          '为住宅和商业用途打造功能齐全、视觉吸引力强的空间。模板强调布局、颜色和家具配置，为您的设计愿景提供多功能工具包。',
+        icon: 'tabler:home-star',
+      },
+      {
+        title: '摄影作品',
+        description: '赋能摄影师，我们的模板助力引人入胜的故事叙述。注重布局、画廊和排版，适合专业人士和爱好者。',
+        icon: 'tabler:photo',
+      },
+      {
+        title: '电子商务',
+        description:
+          '打造引人入胜的在线商店，我们的电商模板确保动态展示产品。适合初创企业或网站升级。',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: '博客写作',
+        description:
+          '注重排版，这些模板赋能作者有效展示内容，确保视觉吸引力和用户友好的博客体验。',
+        icon: 'tabler:article',
+      },
+      {
+        title: '企业服务',
+        description:
+          '提供专业选项以实现有效的视觉传达，这些模板赋能初创公司和成熟企业建立专业品牌形象。',
+        icon: 'tabler:building-store',
+      },
+      {
+        title: '品牌建设',
+        description:
+          '提供预设计元素以保持品牌形象一致性，包括标志和营销材料。适合新企业或品牌升级。',
+        icon: 'tabler:arrow-big-up-lines',
+      },
+      {
+        title: '医疗健康',
+        description: '从演示文稿到患者表格，这些工具增强医疗专业人员的沟通效果。适合医疗机构和研究工作。',
+        icon: 'tabler:vaccine',
+      },
+      {
+        title: '科技行业',
+        description:
+          '展示创新和技术进步，这些模板帮助科技企业有效传达复杂概念，吸引目标受众。',
+        icon: 'tabler:device-laptop',
+      },
+    ]}
+  />
+
+  <!-- Content Widget -->
+  <Content
+    tagline="我们的方法"
+    title="以用户为中心的设计理念"
+    subtitle="每个模板都经过精心设计和测试"
+    content="我们相信优秀的设计应该是美观与实用的完美结合。我们的设计团队深入调研用户需求，确保每个模板都能满足实际使用场景。"
+    items={[
+      {
+        title: '用户研究',
+        description: '深入了解目标用户的需求和偏好，确保设计符合实际使用场景。',
+        icon: 'tabler:users',
+      },
+      {
+        title: '精心设计',
+        description: '注重细节，追求完美，每个元素都经过反复推敲和优化。',
+        icon: 'tabler:palette',
+      },
+      {
+        title: '持续优化',
+        description: '根据用户反馈持续改进，确保模板始终保持最佳状态。',
+        icon: 'tabler:refresh',
+      },
+    ]}
+    columns={3}
+  />
+
+  <!-- Testimonials Widget -->
+  <Testimonials
+    tagline="客户评价"
+    title="深受客户信赖"
+    subtitle="听听我们的客户怎么说"
+    testimonials={[
+      {
+        name: '张先生',
+        job: '某科技公司 CEO',
+        testimonial: '使用他们的模板后，我们的网站焕然一新，用户反馈非常好。专业、高效、值得推荐！',
+        image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      },
+      {
+        name: '李女士',
+        job: '独立设计师',
+        testimonial: '作为自由职业者，这些模板帮我节省了大量时间。质量高， customization 灵活，是我的得力助手。',
+        image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      },
+      {
+        name: '王先生',
+        job: '电商创业者',
+        testimonial: '电商模板非常专业，功能齐全。上线后转化率明显提升，物超所值！',
+        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+      },
+    ]}
+  />
+
+  <!-- CTA Widget -->
+  <CallToAction
+    tagline="开始使用"
+    title="准备好提升您的项目了吗？"
+    subtitle="立即探索我们的模板库，找到最适合您的设计方案。"
+    button={{
+      text: '浏览模板',
+      href: '/zh/',
+      variant: 'primary',
+      icon: 'tabler:arrow-right',
+    }}
+  />
+</Layout>

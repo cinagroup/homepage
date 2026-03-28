@@ -1,0 +1,65 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: '个人落地页',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="个人品牌"
+    title={'展示您的<span class="text-accent dark:text-white">个人风采</span>'}
+    subtitle="打造专业的个人品牌网站。展示您的作品、经历和技能，建立个人影响力。"
+    actions={[
+      {
+        variant: 'primary',
+        text: '创建我的页面',
+        href: '/zh/contact',
+        icon: 'tabler:user-plus',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: '个人品牌',
+    }}
+  />
+
+  <Features
+    tagline="功能亮点"
+    title="展示最好的自己"
+    subtitle="专为个人品牌设计的功能"
+    items={[
+      {
+        title: '作品集展示',
+        description: '精美的作品集画廊，展示您的最佳作品。',
+        icon: 'tabler:gallery',
+      },
+      {
+        title: '简历页面',
+        description: '专业的简历展示，突出您的技能和经历。',
+        icon: 'tabler:file-cv',
+      },
+      {
+        title: '联系表单',
+        description: '让访客轻松联系您，不错过任何机会。',
+        icon: 'tabler:mail',
+      },
+    ]}
+    columns={3}
+  />
+
+  <CallToAction
+    tagline="开始打造"
+    title="准备好建立您的个人品牌了吗？"
+    subtitle="使用我们的模板，打造令人印象深刻的个人网站。"
+    button={{
+      text: '创建页面',
+      href: '/zh/contact',
+      variant: 'primary',
+    }}
+  />
+</Layout>

@@ -1,0 +1,70 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: '产品落地页',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="产品展示"
+    title={'推出您的<span class="text-accent dark:text-white">新产品</span>'}
+    subtitle="精心设计的产品落地页，突出产品特色，吸引目标客户，提升销售转化。"
+    actions={[
+      {
+        variant: 'primary',
+        text: '开始构建',
+        href: '/zh/contact',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: '产品展示',
+    }}
+  />
+
+  <Features
+    tagline="核心功能"
+    title="产品展示的最佳实践"
+    subtitle="让您的产品脱颖而出"
+    items={[
+      {
+        title: '产品特性',
+        description: '清晰展示产品核心功能和优势。',
+        icon: 'tabler:star',
+      },
+      {
+        title: '使用场景',
+        description: '展示产品在实际场景中的应用效果。',
+        icon: 'tabler:photo',
+      },
+      {
+        title: '用户评价',
+        description: '真实用户反馈，建立产品信任度。',
+        icon: 'tabler:message',
+      },
+      {
+        title: '购买引导',
+        description: '明确的 CTA，引导用户完成购买。',
+        icon: 'tabler:shopping-cart',
+      },
+    ]}
+    columns={2}
+  />
+
+  <CallToAction
+    tagline="立即发布"
+    title="准备好发布您的产品了吗？"
+    subtitle="使用我们的模板，打造高转化率的产品落地页。"
+    button={{
+      text: '开始构建',
+      href: '/zh/contact',
+      variant: 'primary',
+    }}
+  />
+</Layout>

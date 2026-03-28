@@ -1,0 +1,65 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: '初创企业落地页',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="初创企业"
+    title={'启动您的<span class="text-accent dark:text-white">创业之旅</span>'}
+    subtitle="为初创企业量身定制的落地页模板。快速上线，验证想法，吸引投资。"
+    actions={[
+      {
+        variant: 'primary',
+        text: '开始构建',
+        href: '/zh/contact',
+        icon: 'tabler:rocket',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: '初创企业',
+    }}
+  />
+
+  <Features
+    tagline="为什么选择我们"
+    title="初创企业的理想选择"
+    subtitle="专为创业团队设计的功能和定价"
+    items={[
+      {
+        title: '快速上线',
+        description: '几小时内完成网站搭建，专注核心业务。',
+        icon: 'tabler:clock',
+      },
+      {
+        title: '成本效益',
+        description: '经济实惠的价格，适合预算有限的初创团队。',
+        icon: 'tabler:coin',
+      },
+      {
+        title: '投资人展示',
+        description: '专业的展示页面，帮助吸引潜在投资人。',
+        icon: 'tabler:briefcase',
+      },
+    ]}
+    columns={3}
+  />
+
+  <CallToAction
+    tagline="立即开始"
+    title="准备好启动您的创业项目了吗？"
+    subtitle="使用我们的模板，快速验证您的商业想法。"
+    button={{
+      text: '免费开始',
+      href: '/zh/contact',
+      variant: 'primary',
+    }}
+  />
+</Layout>
