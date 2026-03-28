@@ -1,4 +1,4 @@
-# Social Media Links Configuration
+// Social Media Links Configuration
 
 export const SOCIAL_LINKS = {
   x: 'https://x.com/cinagroup',
