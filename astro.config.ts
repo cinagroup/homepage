@@ -43,7 +43,12 @@ export default defineConfig({
         defaultLocale: 'en',
         locales: {
           en: 'en-US',
-          zh: 'zh-CN',
+          ja: 'ja-JP',
+          ko: 'ko-KR',
+          ru: 'ru-RU',
+          es: 'es-ES',
+          pt: 'pt-BR',
+          fr: 'fr-FR',
         },
       },
     }),
