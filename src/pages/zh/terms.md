@@ -1,5 +1,5 @@
 ---
-layout: ~/layouts/PostLayout.astro
+layout: ~/layouts/MarkdownLayout.astro
 title: 服务条款
 description: CinaGroup 服务条款 - 使用我们服务的条款和条件
 publishDate: 2026-01-01

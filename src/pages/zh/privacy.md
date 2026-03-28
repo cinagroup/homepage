@@ -1,5 +1,5 @@
 ---
-layout: ~/layouts/PostLayout.astro
+layout: ~/layouts/MarkdownLayout.astro
 title: 隐私政策
 description: CinaGroup 隐私政策 - 我们如何收集、使用和保护您的个人信息
 publishDate: 2026-01-01
