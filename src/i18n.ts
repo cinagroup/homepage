@@ -6,13 +6,14 @@ export const languages = {
   ru: 'Русский',
   es: 'Español',
   pt: 'Português',
+  fr: 'Français',
 } as const;
 
 export const defaultLang: keyof typeof languages = 'en';
 
 export type Lang = keyof typeof languages;
 
-export const supportedLocales: Lang[] = ['en', 'zh', 'ja', 'ko', 'ru', 'es', 'pt'];
+export const supportedLocales: Lang[] = ['en', 'zh', 'ja', 'ko', 'ru', 'es', 'pt', 'fr'];
 
 export type Lang = keyof typeof languages;
 
