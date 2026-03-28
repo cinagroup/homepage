@@ -8,7 +8,7 @@ import Button from '~/components/ui/Button.astro';
 import { getHomePermalink } from '~/utils/permalinks';
 import { trimSlash, getAsset } from '~/utils/permalinks';
 import type { CallToAction } from '~/types';
-import { languages, defaultLang, getLangFromUrl, changeLangPath } from '~/i18n';
+import { languages, defaultLang, getLangFromUrl, changeLangPath, getPath } from '~/i18n';
 
 interface Link {
   text?: string;

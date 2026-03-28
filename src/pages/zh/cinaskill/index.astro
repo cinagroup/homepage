@@ -1,0 +1,161 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'CinaSkill — 机器人技能平台',
+  description: '创建、分享和发现机器人技能，无限可能',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="技能平台"
+    title={'构建您的<span class="text-pink-600 dark:text-pink-400">机器人技能</span>'}
+    subtitle="CinaSkill 是一个开放的技能平台，让任何人都能创建、分享和发现机器人技能。无需编程经验，让创意变为现实。"
+    actions={[
+      {
+        variant: 'primary',
+        text: '创建技能',
+        href: '#create',
+        icon: 'tabler:plus',
+      },
+      { 
+        text: '浏览技能库', 
+        href: '#marketplace',
+        icon: 'tabler:search',
+      },
+    ]}
+    image={{ 
+      src: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80', 
+      alt: 'CinaSkill 技能平台' 
+    }}
+  />
+
+  <!-- Features Section -->
+  <Features
+    id="features"
+    tagline="平台特性"
+    title="强大的技能创建工具"
+    subtitle="从零开始构建您的第一个机器人技能"
+    items={[
+      {
+        title: '可视化编辑器',
+        description: '拖拽式界面，无需编程即可创建复杂的对话流程。',
+        icon: 'tabler:layout-grid',
+      },
+      {
+        title: '技能模板',
+        description: '丰富的预设模板，快速开始您的技能开发。',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'API 集成',
+        description: '轻松连接第三方 API，扩展技能功能。',
+        icon: 'tabler:api',
+      },
+      {
+        title: '测试和调试',
+        description: '内置测试工具，实时预览和调试技能。',
+        icon: 'tabler:bug',
+      },
+      {
+        title: '发布和分发',
+        description: '一键发布到技能市场，让全球用户使用。',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: '数据分析',
+        description: '跟踪技能使用情况，持续优化改进。',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80',
+      alt: 'CinaSkill 编辑器',
+    }}
+  />
+
+  <!-- Content Section -->
+  <Content
+    id="marketplace"
+    tagline="技能市场"
+    title="发现数千种技能"
+    subtitle="从客户服务到生产力工具，应有尽有"
+    content="浏览我们的技能市场，找到适合您需求的技能。每个技能都经过审核，确保质量和安全。"
+    items={[
+      {
+        title: '客户服务',
+        description: '自动回答常见问题、处理投诉、转接人工等。',
+        icon: 'tabler:headset',
+      },
+      {
+        title: '生产力工具',
+        description: '日程管理、会议安排、提醒设置等效率工具。',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: '教育培训',
+        description: '在线学习、知识问答、语言练习等教育技能。',
+        icon: 'tabler:graduation-cap',
+      },
+      {
+        title: '娱乐休闲',
+        description: '游戏、音乐、笑话、占卜等娱乐技能。',
+        icon: 'tabler:gamepad',
+      },
+    ]}
+    columns={2}
+  />
+
+  <!-- How to Create -->
+  <section class="py-16 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold dark:text-white mb-4">三步创建技能</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">简单快速，无需编程经验</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-pink-100 dark:bg-pink-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-pink-600 dark:text-pink-400">1</span>
+          </div>
+          <h3 class="font-bold dark:text-white mb-2 text-xl">设计对话流程</h3>
+          <p class="text-gray-600 dark:text-gray-300">使用可视化编辑器设计对话逻辑和用户交互</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-pink-100 dark:bg-pink-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-pink-600 dark:text-pink-400">2</span>
+          </div>
+          <h3 class="font-bold dark:text-white mb-2 text-xl">添加功能和数据</h3>
+          <p class="text-gray-600 dark:text-gray-300">连接 API、数据库或上传知识库内容</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-pink-100 dark:bg-pink-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-pink-600 dark:text-pink-400">3</span>
+          </div>
+          <h3 class="font-bold dark:text-white mb-2 text-xl">测试并发布</h3>
+          <p class="text-gray-600 dark:text-gray-300">测试技能表现，发布到市场供用户使用</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <CallToAction
+    id="cta"
+    tagline="开始创建"
+    title="准备好展示您的创意了吗？"
+    subtitle="加入数万名开发者，创建独特的机器人技能。"
+    button={{
+      text: '创建技能',
+      href: '/zh/contact',
+      variant: 'primary',
+      icon: 'tabler:plus',
+    }}
+  />
+</Layout>
