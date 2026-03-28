@@ -50,6 +50,9 @@ favicon:
 i18n:
   language: en
   textDirection: ltr
+  locales:
+    - en
+    - zh
 
 apps:
   blog:
