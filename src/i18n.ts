@@ -247,3 +247,10 @@ export function changeLangPath(url: URL, newLang: keyof typeof languages) {
   }
   return parts.join('/').replace(/\/+/g, '/');
 }
+
+export function getPath(path: string, lang: string = defaultLang) {
+  if (lang === defaultLang) {
+    return path;
+  }
+  return `/${lang}${path}`;
+}

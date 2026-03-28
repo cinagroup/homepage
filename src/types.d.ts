@@ -1,5 +1,17 @@
 import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 import type { HTMLAttributes, ImageMetadata } from 'astro/types';
+import type { Lang } from './i18n';
+
+export interface Locals {
+  lang: Lang;
+  pathWithoutLang: string;
+}
+
+declare global {
+  interface App {
+    locals: Locals;
+  }
+}
 
 export interface Post {
   /** A unique ID number that identifies a post. */
