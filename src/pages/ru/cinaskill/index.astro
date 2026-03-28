@@ -1,0 +1,13 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = { title: 'CinaGroup Product' };
+---
+<Layout metadata={metadata}>
+  <Hero tagline="Product" title={'<span class="text-accent dark:text-white">Smart Solution</span>'} subtitle="Powerful tools for business growth" actions={[{ variant: 'primary', text: 'Start Free', href: '/contact', icon: 'tabler:rocket' }]} image={{ src: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80', alt: 'Product' }} />
+  <Features tagline="Key Features" title="Powerful Features" subtitle="Support business success" items={[{ title: 'High Performance', description: 'Fast and reliable processing', icon: 'tabler:zap' }, { title: 'Easy Integration', description: 'Seamlessly connect with existing systems', icon: 'tabler:plug-connected' }, { title: '24/7 Support', description: 'Round-the-clock support', icon: 'tabler:headset' }]} columns={3} />
+  <CallToAction tagline="Start Now" title="Ready to Start?" subtitle="14-day free trial" button={{ text: 'Start Free', href: '/contact', variant: 'primary', icon: 'tabler:rocket' }} />
+</Layout>
