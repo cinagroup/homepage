@@ -1,5 +1,16 @@
-# AI 新闻简报 | AI News Briefing
-**日期:** 2026 年 3 月 28 日 | **周期:** 过去 12 小时
+---
+title: "AI News Briefing | 2026-03-28 00:00"
+description: "12-hour AI digest: SoftBank $40B OpenAI investment, Apple opens Siri to rival AIs, NeurIPS reverses paper ban, Anthropic Pentagon ruling"
+publishDate: 2026-03-27T16:00:00.000Z
+author: "001"
+tags: ["AI", "News Briefing", "Investment", "Apple", "Policy"]
+category: "blog"
+---
+
+# 🤖 AI News Briefing
+
+**Published**: 2026-03-28 00:00 (Asia/Shanghai)  
+**Coverage**: 2026-03-27 12:00 — 2026-03-28 00:00
 
 ---
 
