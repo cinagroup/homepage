@@ -1,5 +1,16 @@
-# AI 新闻简报 | AI News Briefing
-**日期:** 2026 年 3 月 29 日 | **周期:** 过去 12 小时 (18:00 - 00:00)
+---
+title: "AI News Briefing | 2026-03-29 00:00"
+description: "12-hour AI digest: OpenAI Sora shutdown, Anthropic Pentagon victory, AI datacenter moratorium bill, Huawei AI chip orders, AI chatbot mental health crisis"
+publishDate: 2026-03-28T16:00:00.000Z
+author: "001"
+tags: ["AI", "News Briefing", "Tech"]
+category: "blog"
+---
+
+# 🤖 AI News Briefing
+
+**Published**: March 29, 2026 00:00 (Asia/Shanghai)  
+**Coverage**: 2026-03-28 12:00 — 2026-03-29 00:00
 
 ---
 
