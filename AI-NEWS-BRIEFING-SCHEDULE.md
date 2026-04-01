@@ -72,7 +72,7 @@
 ---
 title: "AI News Briefing | 2026-03-22 06:00"
 description: "12-hour AI digest: [brief summary]"
-pubDate: 2026-03-22 06:00:00  # Must include timestamp for correct chronological sorting
+publishDate: 2026-03-22T06:00:00.000Z  # ISO 8601 UTC format (required by Astro content collections)
 author: "001"
 tags: ["AI", "News Briefing", "Tech"]
 category: "blog"

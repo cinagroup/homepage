@@ -1,0 +1,43 @@
+# 微信公众号配置
+# 请在使用前填写真实值
+
+wechat:
+  # 开发者信息（必填）
+  app_id: "wx080cd9e9ee9a5a5f"
+  app_secret: "7b35a4da3a9ab7406be653f64679cc60"
+  
+  # 服务器配置（可选，用于接收用户消息）
+  token: "clawbot2026"
+  encoding_aes_key: ""
+  
+  # 发布配置
+  publish:
+    # 服务号策略：每 6 小时生成草稿，不自动群发（节省每月 4 次群发机会）
+    schedule: "0 */6 * * *"  # 每 6 小时 (00:00, 06:00, 12:00, 18:00)
+    timezone: "Asia/Shanghai"
+    auto_publish: false      # false=仅保存草稿，不群发
+    auto_create_draft: true  # true=自动创建草稿
+    max_articles: 1          # 每次发布文章数量
+    
+  # 内容配置
+  content:
+    source_blog: "/root/.openclaw/workspace/cinagroup-site/src/data/post"
+    source_pattern: "ai-news-briefing-*.md"
+    language: "zh-CN"
+    translate: true
+    translate_model: "qwencode/qwen3.5-plus"
+    
+  # 封面图配置
+  cover:
+    generate: true
+    provider: "ali-bailian"           # 图像生成服务：ali-bailian, kimi-2.5, doubao-seed-2.0-pro
+    style: "tech-news"                # 风格：tech-news, minimalist, ai-art
+    size: "900x383"                   # 横图
+    model: "wanx-v1"                  # 通义万相模型
+    api_env: "ALI_API_KEY"            # API Key 环境变量名
+    
+  # 通知配置
+  notification:
+    channel: "qqbot"
+    notify_on_success: true
+    notify_on_failure: true
