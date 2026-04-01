@@ -1,9 +1,10 @@
 ---
-title: "AI News Briefing - March 31, 2026 12:00"
-date: 2026-03-31T12:00:00+08:00
-tags: ["AI", "News", "Briefing"]
-category: "AI News"
-cover: "/images/ai-news-briefing-2026-03-31-12.jpg"
+title: "AI News Briefing | 2026-03-31 12:00"
+description: "12-hour AI digest: AI-curated technology briefing"
+publishDate: 2026-03-31T04:00:00.000Z
+author: "001"
+tags: ["AI", "News Briefing", "Tech"]
+category: "blog"
 ---
 
 # AI News Briefing
