@@ -143,49 +143,14 @@ const footerData = {
     
     if (scrollContainer && scrollLeftBtn && scrollRightBtn) {
       const scrollAmount = 320;
-      const scrollSpeed = 2;
-      let autoScrollInterval = null;
-      let isUserInteracting = false;
-      
-      function startAutoScroll() {
-        if (autoScrollInterval) return;
-        autoScrollInterval = setInterval(() => {
-          if (!isUserInteracting) {
-            const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-            if (scrollContainer.scrollLeft >= maxScroll - 10) {
-              scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
-            } else {
-              scrollContainer.scrollBy({ left: scrollSpeed, behavior: 'auto' });
-            }
-          }
-        }, 16);
-      }
-      
-      function stopAutoScroll() {
-        if (autoScrollInterval) {
-          clearInterval(autoScrollInterval);
-          autoScrollInterval = null;
-        }
-      }
       
       scrollLeftBtn.addEventListener('click', () => {
-        stopAutoScroll();
         scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        setTimeout(startAutoScroll, 3000);
       });
       
       scrollRightBtn.addEventListener('click', () => {
-        stopAutoScroll();
         scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        setTimeout(startAutoScroll, 3000);
       });
-      
-      scrollContainer.addEventListener('mouseenter', stopAutoScroll);
-      scrollContainer.addEventListener('mouseleave', startAutoScroll);
-      scrollContainer.addEventListener('touchstart', () => { isUserInteracting = true; stopAutoScroll(); });
-      scrollContainer.addEventListener('touchend', () => { isUserInteracting = false; setTimeout(startAutoScroll, 2000); });
-      
-      setTimeout(startAutoScroll, 2000);
     }
   </script>
   

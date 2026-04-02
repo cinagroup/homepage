@@ -265,65 +265,21 @@ const ctaData = {
   </section>
 
   <script>
-    // Auto-scroll functionality
+    // Manual scroll buttons only (no auto-scroll)
     const scrollContainer = document.getElementById('business-scroll');
     const scrollLeftBtn = document.getElementById('scroll-left');
     const scrollRightBtn = document.getElementById('scroll-right');
     
     if (scrollContainer && scrollLeftBtn && scrollRightBtn) {
       const scrollAmount = 320;
-      const scrollSpeed = 2;
-      let autoScrollInterval: number | null = null;
-      let isUserInteracting = false;
       
-      // Auto-scroll to right
-      function startAutoScroll() {
-        if (autoScrollInterval) return;
-        autoScrollInterval = window.setInterval(() => {
-          if (!isUserInteracting) {
-            const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-            if (scrollContainer.scrollLeft >= maxScroll - 10) {
-              // Reset to beginning
-              scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
-            } else {
-              scrollContainer.scrollBy({ left: scrollSpeed, behavior: 'auto' });
-            }
-          }
-        }, 16);
-      }
-      
-      function stopAutoScroll() {
-        if (autoScrollInterval) {
-          clearInterval(autoScrollInterval);
-          autoScrollInterval = null;
-        }
-      }
-      
-      // Manual scroll buttons
       scrollLeftBtn.addEventListener('click', () => {
-        stopAutoScroll();
         scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        setTimeout(startAutoScroll, 3000);
       });
       
       scrollRightBtn.addEventListener('click', () => {
-        stopAutoScroll();
         scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        setTimeout(startAutoScroll, 3000);
       });
-      
-      // Pause on hover/touch
-      scrollContainer.addEventListener('mouseenter', stopAutoScroll);
-      scrollContainer.addEventListener('mouseleave', startAutoScroll);
-      scrollContainer.addEventListener('touchstart', () => { isUserInteracting = true; stopAutoScroll(); });
-      scrollContainer.addEventListener('touchend', () => { isUserInteracting = false; setTimeout(startAutoScroll, 2000); });
-      scrollContainer.addEventListener('scroll', () => {
-        isUserInteracting = true;
-        setTimeout(() => { isUserInteracting = false; }, 1000);
-      });
-      
-      // Start auto-scroll after delay
-      setTimeout(startAutoScroll, 2000);
     }
   </script>
 

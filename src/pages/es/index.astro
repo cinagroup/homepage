@@ -168,10 +168,7 @@ const footerData = {
         }
       }
       
-      scrollLeftBtn.addEventListener('click', () => {
-        stopAutoScroll();
-        scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        setTimeout(startAutoScroll, 3000);
+      setTimeout(startAutoScroll, 3000);
       });
       
       scrollRightBtn.addEventListener('click', () => {
