@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import Footer from '~/components/widgets/Footer.astro';
 
 const metadata = {
   title: 'CinaGroup — AI 및 Web3 솔루션',
@@ -14,6 +15,46 @@ const businessCards = [
   { name: 'CinaSkill', tagline: '스킬 플랫폼', desc: '무한한 가능성으로 로봇 스킬을 생성, 공유 및 발견', action: '스킬 탐색', href: '/ko/cinaskill', color: 'pink', icon: 'code' },
   { name: 'CinaChain', tagline: '블록체인 네트워크', desc: '스마트 계약과 DeFi 를 지원하는 고성능, 저비용 Web3 인프라', action: '네트워크 보기', href: '/ko/cinachain', color: 'purple', icon: 'world' },
 ];
+
+const footerData = {
+  links: [
+    { title: '제품', links: [
+      { text: 'CinaSeek — 지능형 검색', href: '/ko/cinaseek' },
+      { text: 'CinaClaw — AI 어시스턴트', href: '/ko/cinaclaw' },
+      { text: 'CinaToken — AI API 게이트웨이', href: '/ko/cinatoken' },
+      { text: 'CinaSkill — 스킬 플랫폼', href: '/ko/cinaskill' },
+      { text: 'CinaChain — 블록체인 네트워크', href: '/ko/cinachain' },
+    ]},
+    { title: 'Developers', links: [
+      { text: 'Documentation', href: '#' },
+      { text: 'API Reference', href: '#' },
+      { text: 'SDK & Tools', href: '#' },
+      { text: 'Grants Program', href: '#' },
+      { text: 'Developer Blog', href: '/ko/blog' },
+    ]},
+    { title: 'Support', links: [
+      { text: 'Help Center', href: '#' },
+      { text: 'Community', href: '#' },
+      { text: 'Contact Support', href: '/ko/contact' },
+      { text: 'System Status', href: '#' },
+    ]},
+    { title: 'Company', links: [
+      { text: 'About Us', href: '/ko/about' },
+      { text: 'Blog', href: '/ko/blog' },
+      { text: 'Careers', href: '#' },
+      { text: 'Press Kit', href: '#' },
+      { text: 'Contact', href: '/ko/contact' },
+    ]},
+  ],
+  socialLinks: [
+    { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/cinagroup' },
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/cinagroup' },
+    { ariaLabel: 'TikTok', icon: 'tabler:brand-tiktok', href: 'https://tiktok.com/@cinaseek' },
+    { ariaLabel: 'Telegram', icon: 'tabler:brand-telegram', href: '#' },
+    { ariaLabel: 'RSS', icon: 'tabler:rss', href: '/rss.xml' },
+  ],
+  footNote: '© 2026 By CinaClaw@CinaSeek.AI All Rights Reserved.',
+};
 ---
 
 <Layout metadata={metadata}>
@@ -96,30 +137,19 @@ const businessCards = [
   </section>
 
   <script>
-    const scrollContainer = document.getElementById('business-scroll');
-    const scrollLeftBtn = document.getElementById('scroll-left');
-    const scrollRightBtn = document.getElementById('scroll-right');
+    const scrollContainer = document.getElementById('business-scroll'), scrollLeftBtn = document.getElementById('scroll-left'), scrollRightBtn = document.getElementById('scroll-right');
     if (scrollContainer && scrollLeftBtn && scrollRightBtn) {
-      const scrollAmount = 320, scrollSpeed = 2;
-      let autoScrollInterval = null, isUserInteracting = false;
-      function startAutoScroll() {
-        if (autoScrollInterval) return;
-        autoScrollInterval = setInterval(() => {
-          if (!isUserInteracting) {
-            const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-            if (scrollContainer.scrollLeft >= maxScroll - 10) scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
-            else scrollContainer.scrollBy({ left: scrollSpeed, behavior: 'auto' });
-          }
-        }, 16);
-      }
+      const scrollAmount = 320, scrollSpeed = 2; let autoScrollInterval = null, isUserInteracting = false;
+      function startAutoScroll() { if (autoScrollInterval) return; autoScrollInterval = setInterval(() => { if (!isUserInteracting) { const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth; if (scrollContainer.scrollLeft >= maxScroll - 10) scrollContainer.scrollTo({ left: 0, behavior: 'smooth' }); else scrollContainer.scrollBy({ left: scrollSpeed, behavior: 'auto' }); } }, 16); }
       function stopAutoScroll() { if (autoScrollInterval) { clearInterval(autoScrollInterval); autoScrollInterval = null; } }
       scrollLeftBtn.addEventListener('click', () => { stopAutoScroll(); scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' }); setTimeout(startAutoScroll, 3000); });
       scrollRightBtn.addEventListener('click', () => { stopAutoScroll(); scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' }); setTimeout(startAutoScroll, 3000); });
-      scrollContainer.addEventListener('mouseenter', stopAutoScroll);
-      scrollContainer.addEventListener('mouseleave', startAutoScroll);
+      scrollContainer.addEventListener('mouseenter', stopAutoScroll); scrollContainer.addEventListener('mouseleave', startAutoScroll);
       scrollContainer.addEventListener('touchstart', () => { isUserInteracting = true; stopAutoScroll(); });
       scrollContainer.addEventListener('touchend', () => { isUserInteracting = false; setTimeout(startAutoScroll, 2000); });
       setTimeout(startAutoScroll, 2000);
     }
   </script>
+  
+  <Footer {...footerData} />
 </Layout>

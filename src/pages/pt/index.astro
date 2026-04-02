@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import Footer from '~/components/widgets/Footer.astro';
 
 const metadata = {
   title: 'CinaGroup — Soluções de IA e Web3',
@@ -14,6 +15,46 @@ const businessCards = [
   { name: 'CinaSkill', tagline: 'Plataforma de Habilidades', desc: 'Crie, compartilhe e descubra habilidades de robôs com possibilidades ilimitadas', action: 'Explorar Habilidades', href: '/pt/cinaskill', color: 'pink', icon: 'code' },
   { name: 'CinaChain', tagline: 'Rede Blockchain', desc: 'Infraestrutura Web3 de alto desempenho e baixo custo com contratos inteligentes e DeFi', action: 'Ver Rede', href: '/pt/cinachain', color: 'purple', icon: 'world' },
 ];
+
+const footerData = {
+  links: [
+    { title: 'Produtos', links: [
+      { text: 'CinaSeek — Busca Inteligente', href: '/pt/cinaseek' },
+      { text: 'CinaClaw — Assistente de IA', href: '/pt/cinaclaw' },
+      { text: 'CinaToken — Gateway de API de IA', href: '/pt/cinatoken' },
+      { text: 'CinaSkill — Plataforma de Habilidades', href: '/pt/cinaskill' },
+      { text: 'CinaChain — Rede Blockchain', href: '/pt/cinachain' },
+    ]},
+    { title: 'Developers', links: [
+      { text: 'Documentation', href: '#' },
+      { text: 'API Reference', href: '#' },
+      { text: 'SDK & Tools', href: '#' },
+      { text: 'Grants Program', href: '#' },
+      { text: 'Developer Blog', href: '/pt/blog' },
+    ]},
+    { title: 'Support', links: [
+      { text: 'Help Center', href: '#' },
+      { text: 'Community', href: '#' },
+      { text: 'Contact Support', href: '/pt/contact' },
+      { text: 'System Status', href: '#' },
+    ]},
+    { title: 'Company', links: [
+      { text: 'About Us', href: '/pt/about' },
+      { text: 'Blog', href: '/pt/blog' },
+      { text: 'Careers', href: '#' },
+      { text: 'Press Kit', href: '#' },
+      { text: 'Contact', href: '/pt/contact' },
+    ]},
+  ],
+  socialLinks: [
+    { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: 'https://github.com/cinagroup' },
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/cinagroup' },
+    { ariaLabel: 'TikTok', icon: 'tabler:brand-tiktok', href: 'https://tiktok.com/@cinaseek' },
+    { ariaLabel: 'Telegram', icon: 'tabler:brand-telegram', href: '#' },
+    { ariaLabel: 'RSS', icon: 'tabler:rss', href: '/rss.xml' },
+  ],
+  footNote: '© 2026 By CinaClaw@CinaSeek.AI All Rights Reserved.',
+};
 ---
 
 <Layout metadata={metadata}>
@@ -65,10 +106,14 @@ const businessCards = [
           ))}
         </div>
         <button id="scroll-left" class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 z-10" aria-label="Scroll left">
-          <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
         </button>
         <button id="scroll-right" class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 z-10" aria-label="Scroll right">
-          <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
         </button>
       </div>
     </div>
@@ -87,4 +132,6 @@ const businessCards = [
       setTimeout(startAutoScroll, 2000);
     }
   </script>
+  
+  <Footer {...footerData} />
 </Layout>
