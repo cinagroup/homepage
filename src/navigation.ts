@@ -14,6 +14,10 @@ export const headerData = {
           href: getPermalink('/cinaclaw'),
         },
         {
+          text: 'CinaToken — AI API Gateway',
+          href: getPermalink('/cinatoken'),
+        },
+        {
           text: 'CinaSkill — Skills Platform',
           href: getPermalink('/cinaskill'),
         },
@@ -88,6 +92,7 @@ export const footerData = {
       links: [
         { text: 'CinaSeek — Intelligent Search', href: '/cinaseek' },
         { text: 'CinaClaw — AI Assistant', href: '/cinaclaw' },
+        { text: 'CinaToken — AI API Gateway', href: '/cinatoken' },
         { text: 'CinaSkill — Skills Platform', href: '/cinaskill' },
         { text: 'CinaChain — Blockchain Network', href: '/cinachain' },
       ],
