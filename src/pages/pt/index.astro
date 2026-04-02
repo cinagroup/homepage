@@ -4,64 +4,75 @@ import Hero from '~/components/widgets/Hero.astro';
 
 const metadata = {
   title: 'CinaGroup — Soluções de IA e Web3',
-  description: 'A CinaGroup oferece soluções de ponta em busca com IA (CinaSeek), robôs inteligentes (CinaClaw), plataforma de habilidades (CinaSkill) e infraestrutura blockchain (CinaChain).',
+  description: 'CinaGroup oferece soluções de ponta em busca com IA (CinaSeek), assistente de IA (CinaClaw), gateway de API de IA (CinaToken), plataforma de habilidades (CinaSkill) e infraestrutura blockchain (CinaChain).',
 };
+
+const businessCards = [
+  { name: 'CinaSeek', tagline: 'Busca Inteligente', href: '/pt/cinaseek', color: 'green' },
+  { name: 'CinaClaw', tagline: 'Assistente de IA', href: '/pt/cinaclaw', color: 'orange' },
+  { name: 'CinaToken', tagline: 'Gateway de API de IA', href: '/pt/cinatoken', color: 'blue' },
+  { name: 'CinaSkill', tagline: 'Plataforma de Habilidades', href: '/pt/cinaskill', color: 'pink' },
+  { name: 'CinaChain', tagline: 'Rede Blockchain', href: '/pt/cinachain', color: 'purple' },
+];
 ---
 
 <Layout metadata={metadata}>
   <Hero
     tagline="Bem-vindo à CinaGroup"
     title={'Construindo o futuro de <span class="text-accent dark:text-white">IA e Web3</span>'}
-    subtitle="Fornecemos soluções de ponta em busca com IA, robôs inteligentes, plataforma de habilidades e infraestrutura blockchain. Capacitando empresas e desenvolvedores em todo o mundo."
+    subtitle="Fornecemos soluções de ponta em busca com IA, assistente de IA, gateway de API de IA, plataforma de habilidades e infraestrutura blockchain. Impulsionando empresas e desenvolvedores em todo o mundo."
     actions={[
-      {
-        variant: 'primary',
-        text: 'Explorar Produtos',
-        href: '#business',
-        icon: 'tabler:arrow-down',
-      },
-      { 
-        text: 'Contato', 
-        href: '/pt/contact',
-        icon: 'tabler:mail',
-      },
+      { variant: 'primary', text: 'Explorar Produtos', href: '#business', icon: 'tabler:arrow-down' },
+      { text: 'Contato', href: '/pt/contact', icon: 'tabler:mail' },
     ]}
-    image={{ 
-      src: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80', 
-      alt: 'Tecnologia IA' 
-    }}
+    image={{ src: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80', alt: 'Tecnologia IA' }}
   />
 
-  <section id="business" class="py-16 bg-white dark:bg-gray-900">
+  <section id="business" class="py-16 bg-white dark:bg-gray-900 overflow-hidden">
     <div class="container mx-auto px-4">
       <div class="text-center max-w-3xl mx-auto mb-12">
-        <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4">
-          Nossas Linhas de Negócio
-        </h2>
-        <p class="text-lg text-gray-600 dark:text-gray-300">
-          Quatro plataformas poderosas trabalham juntas para oferecer soluções abrangentes de IA e Web3
-        </p>
+        <h2 class="text-3xl font-bold tracking-tight dark:text-white sm:text-4xl mb-4">Nossas Linhas de Negócio</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300">Cinco plataformas potentes trabalham juntas para oferecer soluções integrais de IA e Web3</p>
       </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {['CinaSeek', 'CinaClaw', 'CinaSkill', 'CinaChain'].map((name, i) => (
-          <div class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700">
-            <div class={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-${['green', 'orange', 'pink', 'purple'][i]}-400 to-${['green', 'orange', 'pink', 'purple'][i]}-600`}></div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold dark:text-white mb-2">{name}</h3>
-              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                {['Busca Inteligente', 'Assistente IA', 'Plataforma de Habilidades', 'Rede Blockchain'][i]}
-              </p>
-              <a href={`/pt/${name.toLowerCase()}`} class={`inline-flex items-center text-${['green', 'orange', 'pink', 'purple'][i]}-600 dark:text-${['green', 'orange', 'pink', 'purple'][i]}-400 font-medium text-sm`}>
-                Saiba Mais
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </a>
+      <div class="relative group">
+        <div id="business-scroll" class="flex overflow-x-auto gap-6 pb-4 snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 scroll-smooth">
+          {businessCards.map((card) => (
+            <div class="snap-start shrink-0 w-80 md:w-72 lg:w-80">
+              <div class="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 h-full">
+                <div class={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-${card.color}-400 to-${card.color}-600`}></div>
+                <div class="p-6">
+                  <h3 class="text-xl font-bold dark:text-white mb-2">{card.name}</h3>
+                  <p class={`text-sm text-${card.color}-600 dark:text-${card.color}-400 font-medium mb-3`}>{card.tagline}</p>
+                  <a href={card.href} class={`inline-flex items-center text-${card.color}-600 dark:text-${card.color}-400 hover:text-${card.color}-700 dark:hover:text-${card.color}-300 font-medium text-sm group-hover:translate-x-1 transition-transform`}>
+                    Mais Informações
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <button id="scroll-left" class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 z-10" aria-label="Scroll left">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <button id="scroll-right" class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 z-10" aria-label="Scroll right">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </button>
       </div>
     </div>
   </section>
+  <script>
+    const scrollContainer = document.getElementById('business-scroll'), scrollLeftBtn = document.getElementById('scroll-left'), scrollRightBtn = document.getElementById('scroll-right');
+    if (scrollContainer && scrollLeftBtn && scrollRightBtn) {
+      const scrollAmount = 320, scrollSpeed = 2; let autoScrollInterval = null, isUserInteracting = false;
+      function startAutoScroll() { if (autoScrollInterval) return; autoScrollInterval = setInterval(() => { if (!isUserInteracting) { const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth; if (scrollContainer.scrollLeft >= maxScroll - 10) scrollContainer.scrollTo({ left: 0, behavior: 'smooth' }); else scrollContainer.scrollBy({ left: scrollSpeed, behavior: 'auto' }); } }, 16); }
+      function stopAutoScroll() { if (autoScrollInterval) { clearInterval(autoScrollInterval); autoScrollInterval = null; } }
+      scrollLeftBtn.addEventListener('click', () => { stopAutoScroll(); scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' }); setTimeout(startAutoScroll, 3000); });
+      scrollRightBtn.addEventListener('click', () => { stopAutoScroll(); scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' }); setTimeout(startAutoScroll, 3000); });
+      scrollContainer.addEventListener('mouseenter', stopAutoScroll); scrollContainer.addEventListener('mouseleave', startAutoScroll);
+      scrollContainer.addEventListener('touchstart', () => { isUserInteracting = true; stopAutoScroll(); });
+      scrollContainer.addEventListener('touchend', () => { isUserInteracting = false; setTimeout(startAutoScroll, 2000); });
+      setTimeout(startAutoScroll, 2000);
+    }
+  </script>
 </Layout>
