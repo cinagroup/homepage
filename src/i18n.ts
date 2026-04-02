@@ -55,6 +55,10 @@ export const ui = {
     'business.cinachain.tagline': 'Blockchain Network',
     'business.cinachain.desc': 'High-performance, low-cost Web3 infrastructure with smart contracts and DeFi',
     'business.cinachain.action': 'View Network',
+    'business.cinatoken.title': 'CinaToken',
+    'business.cinatoken.tagline': 'AI API Gateway',
+    'business.cinatoken.desc': 'Unified API gateway for Claude, GPT, Gemini, and 100+ AI models',
+    'business.cinatoken.action': 'Get API Key',
     
     // Why Choose Us
     'why.title': 'Why Choose Us',
@@ -163,6 +167,10 @@ export const ui = {
     'business.cinachain.tagline': '区块链网络',
     'business.cinachain.desc': '高性能、低成本的 Web3 基础设施，支持智能合约和 DeFi',
     'business.cinachain.action': '查看网络',
+    'business.cinatoken.title': 'CinaToken',
+    'business.cinatoken.tagline': 'AI API 网关',
+    'business.cinatoken.desc': '统一 API 网关，支持 Claude、GPT、Gemini 等 100+ AI 模型',
+    'business.cinatoken.action': '获取 API 密钥',
     
     // Why Choose Us
     'why.title': '为什么选择我们',
