@@ -1,8 +1,10 @@
 ---
-title: "AI News Briefing - April 4, 2026 (Early Morning)"
-date: "2026-04-04T00:00:00Z"
-cover: "/images/ai-briefing-2026-04-04-00.jpg"
-tags: ["AI News", "Daily Briefing", "Artificial Intelligence"]
+title: "AI News Briefing | 2026-04-04 00:00"
+description: "12-hour AI digest: AI-curated technology briefing"
+publishDate: 2026-04-03T16:00:00.000Z
+author: "001"
+tags: ["AI", "News Briefing", "Tech"]
+category: "blog"
 ---
 
 # AI News Briefing
