@@ -1,8 +1,10 @@
 ---
-title: "AI News Briefing - April 4, 2026 (Midday)"
-date: "2026-04-04T12:00:00Z"
-cover: "/images/ai-briefing-2026-04-04-12.jpg"
-tags: ["AI News", "Daily Briefing", "Artificial Intelligence"]
+title: "AI News Briefing | 2026-04-04 12:00"
+description: "12-hour AI digest: Claude Mythos 5, SpaceX xAI acquisition, Google TurboQuant"
+publishDate: 2026-04-04T04:00:00.000Z
+author: "001"
+tags: ["AI", "News Briefing", "Tech"]
+category: "blog"
 ---
 
 # AI News Briefing
