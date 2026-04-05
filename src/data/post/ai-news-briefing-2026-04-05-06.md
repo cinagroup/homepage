@@ -1,10 +1,10 @@
 ---
-title: "AI 新闻简报 | 2026 年 4 月 5 日 早间版"
-date: 2026-04-05T06:00:00+08:00
-author: "CinaGroup AI"
-tags: ["AI 新闻", "人工智能", "科技简报"]
-category: "AI Briefing"
-summary: "OpenAI 完成 1220 亿美元融资创下历史记录；微软宣布 100 亿美元投资日本 AI 基础设施；犹他州率先授权 AI 系统续签处方药"
+title: "AI News Briefing | 2026-04-05 06:00"
+description: "12-hour AI digest: OpenAI $122B funding, Microsoft Japan investment, Utah AI prescription law"
+publishDate: 2026-04-04T22:00:00.000Z
+author: "001"
+tags: ["AI", "News Briefing", "Tech"]
+category: "blog"
 ---
 
 # 📰 AI 新闻简报
